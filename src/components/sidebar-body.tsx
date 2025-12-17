@@ -11,7 +11,9 @@ import {
 } from "@/components/ui/sidebar";
 import { Command } from "lucide-react";
 
-export function SidebarLinks({ ...props }: React.ComponentProps<typeof Sidebar>) {
+export function SidebarBody({
+  ...props
+}: React.ComponentProps<typeof Sidebar>) {
   return (
     <Sidebar
       variant="inset"
@@ -40,7 +42,7 @@ export function SidebarLinks({ ...props }: React.ComponentProps<typeof Sidebar>)
       </SidebarHeader>
       {/* SIDEBAR CONTENT */}
       <SidebarContent>Hello</SidebarContent>
-      <SidebarFooter>
+      <SidebarFooter className="">
         <SidebarFooterMenu />
       </SidebarFooter>
     </Sidebar>
