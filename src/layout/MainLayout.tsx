@@ -1,19 +1,10 @@
-import { Outlet } from "react-router-dom";
-// import Navbar from "@/components/AppNavbar";
-// import AppSidebar from "@/components/AppSidebar";
+// import { Outlet } from "react-router-dom";
 
 export default function MainLayout() {
   return (
-    <>
-      {/* <AppSidebar /> */}
-
-      <main className="w-full h-screen flex flex-col">
-        {/* <Navbar /> */}
-
-        <div className="flex-1 min-h-0 overflow-auto">
-          <Outlet />
-        </div>
-      </main>
-    </>
+    <main className="w-screen h-screen p-3 border border-red-500">
+      <div className="w-full h-full flex border border-blue-500">
+      </div>
+    </main>
   );
 }

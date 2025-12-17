@@ -1,11 +1,11 @@
 import { RouterProvider } from "react-router-dom";
 import { router } from "@/app/router";
-import { ThemeProvider } from "@/components/providers/ThemeProvider"
+import AppProviders from "./components/providers/AppProviders";
 
 export default function App() {
   return (
-    <ThemeProvider defaultTheme="dark" storageKey="ui-theme">
+    <AppProviders>
       <RouterProvider router={router} />
-    </ThemeProvider>
+    </AppProviders>
   );
 }
