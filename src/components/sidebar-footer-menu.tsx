@@ -4,7 +4,14 @@ import {
   useSidebar,
 } from "@/components/ui/sidebar";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { BadgeCheck, Bell, ChevronsUpDown, CreditCard, LogOut, Sparkles } from "lucide-react";
+import {
+  Bell,
+  ChevronsUpDown,
+  LogOut,
+  Moon,
+  Sparkles,
+  Sun,
+} from "lucide-react";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -14,9 +21,13 @@ import {
   DropdownMenuItem,
   DropdownMenuSeparator,
 } from "./ui/dropdown-menu";
+import user from "@/user";
+import { useTheme } from "./providers/ThemeProvider";
 
 export function SidebarFooterMenu() {
   const { isMobile } = useSidebar();
+
+  const { theme, setTheme } = useTheme();
 
   return (
     <SidebarMenu className="">
@@ -32,8 +43,10 @@ export function SidebarFooterMenu() {
               <AvatarFallback className="rounded-lg">CN</AvatarFallback>
             </Avatar>
             <div className="grid flex-1 text-left text-sm leading-tight">
-              <span className="truncate font-medium">Abraham M.</span>
-              <span className="truncate text-xs">CEO</span>
+              <span className="truncate font-medium">
+                {user.name} {user.lastName[0]}.
+              </span>
+              <span className="truncate text-xs">{user.position}</span>
             </div>
             <ChevronsUpDown className="ml-auto size-4" />
           </SidebarMenuButton>
@@ -46,14 +59,16 @@ export function SidebarFooterMenu() {
           sideOffset={4}
         >
           <DropdownMenuLabel className="p-0 font-normal">
-            <div className="flex items-center gap-2 px-1 py-1.5 text-left text-sm">
+            <div className="flex items-center justify-center gap-2 px-1 py-1.5 text-left text-sm">
               <Avatar className="h-8 w-8 rounded-lg">
                 <AvatarImage src="https://github.com/shadcn.png" />
                 <AvatarFallback className="rounded-lg">CN</AvatarFallback>
               </Avatar>
               <div className="grid flex-1 text-left text-sm leading-tight">
-                <span className="truncate font-medium">Abraham M.</span>
-                <span className="truncate text-xs">CEO</span>
+                <span className="truncate font-medium">
+                  {user.name} {user.lastName[0]}.
+                </span>
+                <span className="truncate text-xs">Edit profile</span>
               </div>
             </div>
           </DropdownMenuLabel>
@@ -66,13 +81,12 @@ export function SidebarFooterMenu() {
           </DropdownMenuGroup>
           <DropdownMenuSeparator />
           <DropdownMenuGroup>
-            <DropdownMenuItem>
-              <BadgeCheck />
-              Account
-            </DropdownMenuItem>
-            <DropdownMenuItem>
-              <CreditCard />
-              Billing
+            <DropdownMenuItem
+              onClick={() => setTheme(theme === "light" ? "dark" : "light")}
+              className="cursor-pointer gap-2"
+            >
+              {theme === "light" ? <Sun /> : <Moon />}
+              Theme
             </DropdownMenuItem>
             <DropdownMenuItem>
               <Bell />
