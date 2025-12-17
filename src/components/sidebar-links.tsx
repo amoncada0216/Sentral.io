@@ -1,5 +1,5 @@
 import * as React from "react";
-import { NavUser } from "@/components/nav-user";
+import { SidebarFooterMenu } from "@/components/sidebar-footer-menu";
 import {
   Sidebar,
   SidebarContent,
@@ -11,7 +11,7 @@ import {
 } from "@/components/ui/sidebar";
 import { Command } from "lucide-react";
 
-export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
+export function SidebarLinks({ ...props }: React.ComponentProps<typeof Sidebar>) {
   return (
     <Sidebar
       variant="inset"
@@ -41,7 +41,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
       {/* SIDEBAR CONTENT */}
       <SidebarContent>Hello</SidebarContent>
       <SidebarFooter>
-        <NavUser />
+        <SidebarFooterMenu />
       </SidebarFooter>
     </Sidebar>
   );
