@@ -6,7 +6,7 @@ import {
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import {
   Bell,
-  ChevronsUpDown,
+  ChevronUp,
   LogOut,
   Moon,
   Sparkles,
@@ -36,7 +36,7 @@ export function SidebarFooterMenu() {
         <DropdownMenuTrigger asChild>
           <SidebarMenuButton
             size="lg"
-            className="data-[state=open]:bg-sidebar-accent data-[state=open]:text-sidebar-accent-foreground"
+            className="data-[state=open]:bg-sidebar-accent border data-[state=open]:text-sidebar-accent-foreground"
           >
             <Avatar className="h-9 w-9 rounded-full overflow-hidden">
               <AvatarImage src="https://github.com/shadcn.png" />
@@ -48,7 +48,7 @@ export function SidebarFooterMenu() {
               </span>
               <span className="truncate text-xs">{user.position}</span>
             </div>
-            <ChevronsUpDown className="ml-auto size-4" />
+            <ChevronUp className="ml-auto size-4" />
           </SidebarMenuButton>
         </DropdownMenuTrigger>
         {/* DROPDOWN MENU CONTENT */}
