@@ -1,0 +1,14 @@
+[
+  { "month": "January", "numericValue": 10240 },
+  { "month": "February", "numericValue": 10890 },
+  { "month": "March", "numericValue": 11520 },
+  { "month": "April", "numericValue": 11280 },
+  { "month": "May", "numericValue": 11890 },
+  { "month": "June", "numericValue": 12140 },
+  { "month": "July", "numericValue": 12680 },
+  { "month": "August", "numericValue": 12950 },
+  { "month": "September", "numericValue": 13320 },
+  { "month": "October", "numericValue": 13780 },
+  { "month": "November", "numericValue": 14110 },
+  { "month": "December", "numericValue": 13476 }
+]
