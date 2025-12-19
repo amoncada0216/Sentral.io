@@ -12,11 +12,11 @@ export function AppBreadcrumb() {
     <Breadcrumb>
       <BreadcrumbList>
         <BreadcrumbItem className="hidden md:block">
-          <BreadcrumbLink href="#">Main Dashboard</BreadcrumbLink>
+          <BreadcrumbLink className="cursor-pointer" href="#">Main Dashboard</BreadcrumbLink>
         </BreadcrumbItem>
         <BreadcrumbSeparator className="hidden md:block" />
         <BreadcrumbItem>
-          <BreadcrumbPage>Overview</BreadcrumbPage>
+          <BreadcrumbPage className="cursor-pointer">Overview</BreadcrumbPage>
         </BreadcrumbItem>
       </BreadcrumbList>
     </Breadcrumb>

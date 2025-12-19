@@ -1,29 +1,17 @@
-import ActiveUsers from "./modules/overview/active-users";
-import ConversionRate from "./modules/overview/conversion-rate";
-import NetMargin from "./modules/overview/net-margin";
-import OperationalCost from "./modules/overview/operational-cost";
-import SlaCompliance from "./modules/overview/sla-compliance";
-import TotalRevenue from "./modules/overview/total-revenue";
+import PerformanceOverTime from "./modules/overview/performance-over-time";
+import KpiSummary from "./modules/overview/kpi-summary";
 
 export default function Overview() {
   return (
-    <div className="flex flex-1 border-6 border-fuchsia-500 flex-col gap-4 p-4 pt-0">
-      {/* KPI SUMMARY */}
+    <div className="flex flex-1 overflow-hidden border-2 border-fuchsia-500 flex-col gap-4 p-4">
+      {/* SMALL GRID */}
       <div className="grid gap-4 grid-cols-2 md:grid-cols-3 xl:grid-cols-6">
-        <TotalRevenue />
-        <ActiveUsers />
-        <OperationalCost />
-        <ConversionRate />
-        <SlaCompliance />
-        <NetMargin />
+        <KpiSummary />
       </div>
-      {/* PERFORMANCE OVER TIME */}
-      <div className="grid gap-4 grid-cols-1 md:grid-cols-2 xl:grid-cols-2">
+      {/* BIG GRID */}
+      <div className="grid gap-4 grid-cols-1 md:grid-cols-1 xl:grid-cols-2 border border-red-500">
+        <PerformanceOverTime />
         <div className="bg-muted aspect-video rounded-xl" />
-        <div className="bg-muted aspect-video rounded-xl" />
-      </div>
-      {/* RECENT ACTIVITY FEED / ALERTS & INSIGHTS */}
-      <div className="grid gap-4 grid-cols-1 md:grid-cols-2 xl:grid-cols-2">
         <div className="bg-muted aspect-video rounded-xl" />
         <div className="bg-muted aspect-video rounded-xl" />
       </div>

@@ -5,7 +5,7 @@ import InsetSidebar from "@/components/inset-sidebar";
 
 export default function MainLayout() {
   return (
-    <main className="w-screen h-screen border border-red-500">
+    <main className="w-screen h-screen">
       <div className="w-full h-full flex">
         <SidebarBody />
         <InsetSidebar />
